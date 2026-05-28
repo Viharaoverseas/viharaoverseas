@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Eligibility Desk | Vihara Overseas Bespoke Advisory</title>
+    <meta name="description" content="Calculate your migration eligibility in real-time. Use Vihara Overseas' custom CRS Points Assessment Tool for Canada, Australia, and Germany.">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- GSAP for Luxury Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Ambient Cursor Glow Spotlight -->
+    <div class="ambient-glow"></div>
+
+    <!-- GLASSMORPHIC HEADER -->
+    <header class="header" id="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link" id="nav-logo-anchor">
+                <img src="vihara_logo.svg" alt="Vihara Overseas Logo" class="logo-img" id="nav-logo-image">
+                <div class="logo-text" id="logo-branding-text">
+                    VIHARA
+                    <span>OVERSEAS</span>
+                </div>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" id="mobile-menu-toggle">
+                <span class="nav-toggle-icon"></span>
+            </button>
+            
+            <ul class="nav-menu" id="header-navigation-list">
+                <li class="nav-item"><a href="index.html" class="nav-link" id="link-home">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link" id="link-services">Visa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="opacity: 0.6; cursor: not-allowed;" id="link-travel" title="Coming Soon">Travel (Coming Soon)</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link" id="link-about">Heritage</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link" id="link-contact">Contact</a></li>
+                <li class="nav-item">
+                    <a href="services.html" class="btn btn-primary magnetic" style="padding: 0.6rem 1.5rem; font-size: 0.75rem; margin-left: 1rem;" id="cta-header-book">
+                        Explore Visas
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ASSESSMENT INTRO HERO -->
+    <section class="section hero-section" style="padding-top: 10rem; padding-bottom: 3rem; min-height: auto;" id="assessment-hero">
+        <div class="container">
+            <div style="max-width: 800px;" class="reveal-up" id="assessment-hero-text">
+                <span class="subtitle">Eligibility Desk</span>
+                <h1 style="margin-bottom: 1.5rem;" id="assessment-main-title">Strategic Points <span class="text-gold">Simulator</span></h1>
+                <p style="font-size: 1.2rem; line-height: 1.8;" id="assessment-main-desc">
+                    Determine your immigration and skilled permanent residency standing instantly. Our mathematical simulator computes scores in alignment with Canada, Australia, and European points grids.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CALCULATOR GRID -->
+    <section class="section" style="background: var(--color-bg-pure); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" id="calculator-section">
+        <div class="container">
+            <div class="grid-2" style="gap: 5rem; align-items: start;" id="calculator-main-grid">
+                <!-- Left Hand Interactive Form -->
+                <div class="reveal-up" id="crs-calculator">
+                    <h2 style="font-size: 2rem; margin-bottom: 3rem;" id="calculator-form-title">Enter Profile Details</h2>
+                    
+                    <!-- 1. AGE SLIDER -->
+                    <div class="form-group" id="calculator-group-age">
+                        <label class="form-label">Client Age</label>
+                        <div class="slider-container" id="slider-container-age">
+                            <input type="range" id="age-slider" min="18" max="50" value="28" class="range-slider">
+                            <span class="slider-val" id="age-val-display"><span id="age-val">28</span> <span style="font-size: 1rem; color: var(--color-text-muted);">Yrs</span></span>
+                        </div>
+                    </div>
+                    
+                    <!-- 2. EDUCATION LEVEL -->
+                    <div class="form-group" id="calculator-group-education">
+                        <label class="form-label">Highest Completed Credentials</label>
+                        <div class="luxury-radios" id="radios-education">
+                            <div class="radio-card" id="edu-card-phd">
+                                <input type="radio" id="edu-phd" name="education" value="phd">
+                                <label for="edu-phd" class="radio-label">
+                                    <span style="font-size: 1.2rem; margin-bottom: 0.25rem;">🎓</span>
+                                    <span>Doctorate</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="edu-card-masters">
+                                <input type="radio" id="edu-masters" name="education" value="masters" checked>
+                                <label for="edu-masters" class="radio-label">
+                                    <span style="font-size: 1.2rem; margin-bottom: 0.25rem;">🎓</span>
+                                    <span>Masters</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="edu-card-bachelors">
+                                <input type="radio" id="edu-bachelors" name="education" value="bachelors">
+                                <label for="edu-bachelors" class="radio-label">
+                                    <span style="font-size: 1.2rem; margin-bottom: 0.25rem;">🎓</span>
+                                    <span>Bachelors</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="edu-card-diploma">
+                                <input type="radio" id="edu-diploma" name="education" value="diploma">
+                                <label for="edu-diploma" class="radio-label">
+                                    <span style="font-size: 1.2rem; margin-bottom: 0.25rem;">🎓</span>
+                                    <span>Diploma</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3. WORK EXPERIENCE -->
+                    <div class="form-group" id="calculator-group-experience">
+                        <label class="form-label">Professional Experience (Years Abroad/Local)</label>
+                        <div class="slider-container" id="slider-container-exp">
+                            <input type="range" id="exp-slider" min="0" max="6" value="3" class="range-slider">
+                            <span class="slider-val" id="exp-val-display"><span id="exp-val">3</span> <span style="font-size: 1rem; color: var(--color-text-muted);">Yrs</span></span>
+                        </div>
+                    </div>
+                    
+                    <!-- 4. LANGUAGE PROFICIENCY -->
+                    <div class="form-group" id="calculator-group-language">
+                        <label class="form-label">IELTS / PTE / English Threshold</label>
+                        <div class="luxury-radios" style="grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));" id="radios-language">
+                            <div class="radio-card" id="lang-card-clb10">
+                                <input type="radio" id="lang-clb10" name="language" value="clb10" checked>
+                                <label for="lang-clb10" class="radio-label">
+                                    <span style="font-size: 0.75rem; font-weight: 700; margin-bottom: 0.25rem;">CLB 10</span>
+                                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">IELTS 8.0+</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="lang-card-clb9">
+                                <input type="radio" id="lang-clb9" name="language" value="clb9">
+                                <label for="lang-clb9" class="radio-label">
+                                    <span style="font-size: 0.75rem; font-weight: 700; margin-bottom: 0.25rem;">CLB 9</span>
+                                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">IELTS 7.0-7.5</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="lang-card-clb8">
+                                <input type="radio" id="lang-clb8" name="language" value="clb8">
+                                <label for="lang-clb8" class="radio-label">
+                                    <span style="font-size: 0.75rem; font-weight: 700; margin-bottom: 0.25rem;">CLB 8</span>
+                                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">IELTS 6.5</span>
+                                </label>
+                            </div>
+                            <div class="radio-card" id="lang-card-clb7">
+                                <input type="radio" id="lang-clb7" name="language" value="clb7">
+                                <label for="lang-clb7" class="radio-label">
+                                    <span style="font-size: 0.75rem; font-weight: 700; margin-bottom: 0.25rem;">CLB 7</span>
+                                    <span style="font-size: 0.8rem; color: var(--color-text-muted);">IELTS 6.0</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 5. POINTS BOOSTER -->
+                    <div class="form-group" style="margin-top: 3rem;" id="calculator-group-booster">
+                        <label class="form-label" style="display: flex; align-items: center; gap: 1rem; cursor: pointer;">
+                            <input type="checkbox" id="nomination" style="width: 18px; height: 18px; accent-color: var(--color-gold-dark);">
+                            <span>I possess an active Provincial Nomination or valid job offer (+600 Pts)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Right Hand Real-time Results Dashboard -->
+                <div style="position: sticky; top: 8rem;" class="reveal-up" id="score-sidebar">
+                    <div style="background: linear-gradient(rgba(250, 249, 246, 0.96), rgba(250, 249, 246, 0.96)), url('global_mobility_abstract.png') no-repeat center center / cover; border: 1px solid var(--color-border); padding: 4rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-luxury); text-align: center; overflow: hidden; position: relative;" id="score-box">
+                        <div class="ambient-glow" style="opacity: 0.6;"></div>
+                        
+                        <span class="subtitle" style="font-size: 0.75rem;" id="score-result-label">Computed Advisory Score</span>
+                        <div style="font-family: var(--font-display); font-size: 6rem; font-weight: 700; color: var(--color-gold-dark); line-height: 1; margin: 1.5rem 0;" id="score-display-row">
+                            <span id="score-num">0</span>
+                        </div>
+                        <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 3rem; min-height: 2.5rem;" id="score-status">
+                            Simulating Standing...
+                        </h4>
+                        
+                        <div style="border-top: 1px solid var(--color-border); padding-top: 2.5rem; text-align: left;" id="score-details-pane">
+                            <h4 style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 1.5rem;" id="score-details-title">Pathway Recommendation</h4>
+                            <p style="font-size: 0.95rem; margin-bottom: 2.5rem;" id="score-details-desc">
+                                Based on your points index, we recommend matching your profile with the **Aura Pathway Suite** (skilled permanent residency) for optimal processing outcomes.
+                            </p>
+                            
+                            <a href="#consult-form-block" class="btn btn-primary magnetic" style="width: 100%;" id="score-action-btn">
+                                Retain Advisory Review
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSULTATION BOOKING BLOCK -->
+    <section class="section" id="consult-form-block">
+        <div class="container reveal-up" style="max-width: 700px;">
+            <div style="text-align: center; margin-bottom: 4rem;" id="consult-form-header">
+                <span class="subtitle">Advisory Review</span>
+                <h2>Submit Score For Legal Check</h2>
+                <p>Attach your calculated score metrics and request a comprehensive compliance and document validation check by our RCIC & MARA advisory experts.</p>
+            </div>
+            
+            <form action="#" method="POST" style="background: var(--color-bg-pure); border: 1px solid var(--color-border); padding: 4rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-luxury);" id="assessment-booking-form">
+                <div class="form-group" id="consult-group-name">
+                    <label class="form-label" for="client-name">Full Name</label>
+                    <input type="text" id="client-name" name="name" class="form-input" placeholder="e.g., Aditya Sen" required>
+                </div>
+                
+                <div class="form-group" id="consult-group-email">
+                    <label class="form-label" for="client-email">Corporate Email</label>
+                    <input type="email" id="client-email" name="email" class="form-input" placeholder="aditya.sen@corporate.com" required>
+                </div>
+                
+                <div class="form-group" id="consult-group-consent" style="margin-top: 2rem;">
+                    <label class="form-label" style="display: flex; align-items: flex-start; gap: 0.75rem; cursor: pointer;">
+                        <input type="checkbox" style="margin-top: 0.25rem; accent-color: var(--color-gold-dark);" required>
+                        <span style="font-size: 0.85rem; font-weight: normal; text-transform: none; color: var(--color-text-muted);">
+                            I consent to Vihara Overseas sharing my calculated point scores and profile brief exclusively with their independent Regulated RCIC / MARA legal practitioner panel for validation.
+                        </span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary magnetic" style="width: 100%; margin-top: 2rem;" id="btn-submit-consult">
+                    Submit Profile Review Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer" id="main-footer">
+        <div class="container">
+            <div class="footer-top" id="footer-top-row">
+                <div id="footer-logo-column">
+                    <div class="logo-link footer-logo" id="footer-logo-anchor">
+                        <div class="logo-text" id="footer-logo-text">
+                            VIHARA
+                            <span>OVERSEAS</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc" style="max-width: 320px;" id="footer-description">
+                        Bespoke residency, career mobility, and scholar advisory engineered with absolute transparency, verified legal expertise, and premium client commitment.
+                    </p>
+                </div>
+                
+                <div id="footer-navigation-column">
+                    <h4 class="footer-title" id="footer-title-nav">Navigations</h4>
+                    <ul class="footer-links" id="footer-links-nav">
+                        <li><a href="index.html" id="footer-link-home">Home</a></li>
+                        <li><a href="services.html" id="footer-link-services">Visa</a></li>
+                        <li><a href="#" style="opacity: 0.6; cursor: not-allowed;" id="footer-link-travel" title="Coming Soon">Travel (Coming Soon)</a></li>
+                        <li><a href="about.html" id="footer-link-about">Heritage & Compliance</a></li>
+                        <li><a href="contact.html" id="footer-link-contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-programs-column">
+                    <h4 class="footer-title" id="footer-title-programs">Key Programs</h4>
+                    <ul class="footer-links" id="footer-links-programs">
+                        <li><a href="services.html" id="footer-prog-canada">Student Visa</a></li>
+                        <li><a href="services.html" id="footer-prog-australia">Business Visa</a></li>
+                        <li><a href="services.html" id="footer-prog-germany">Dependent Visa</a></li>
+                        <li><a href="#" id="footer-prog-travel" class="text-gold" style="font-weight: 500; opacity: 0.6; cursor: not-allowed;" title="Coming Soon">Travel (Coming Soon)</a></li>
+                    </ul>
+                </div>
+                
+                <div id="footer-contact-column">
+                    <h4 class="footer-title" id="footer-title-contact">Private Desk</h4>
+                    <ul class="footer-links" id="footer-links-contact" style="color: #9E9EA8; font-weight: 300;">
+                        <li style="margin-bottom: 0.8rem;" id="footer-contact-founder"><span style="color: var(--color-gold); font-weight: 500;">Direct:</span> sureshvudethe@viharaoverseas.in</li>
+                        <li style="margin-bottom: 0.8rem;" id="footer-contact-email"><span style="color: var(--color-gold); font-weight: 500;">Advisory:</span> advisory@viharaoverseas.in</li>
+                        <li id="footer-contact-phone"><span style="color: var(--color-gold); font-weight: 500;">Phone:</span> +91 98450 12345</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" id="footer-bottom-row">
+                <div class="footer-copyright" id="footer-copyright-text">
+                    &copy; 2026 Vihara Overseas. All Rights Reserved. Private, bespoke advisory.
+                </div>
+                <div class="footer-legal-links" id="footer-legal-anchors">
+                    <a href="privacy-policy.html" id="footer-legal-privacy">Privacy Charter</a>
+                    <a href="terms.html" id="footer-legal-terms">Terms of Counsel</a>
+                    <a href="refund-policy.html" id="footer-legal-refund">Refund Milestone Charter</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
