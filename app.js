@@ -719,3 +719,55 @@ function initTravelConcierge() {
         }
     });
 }
+
+/* === PRODUCT PAGE LOGIC === */
+document.addEventListener('DOMContentLoaded', () => {
+    // Main Visa Type Tabs
+    const typeTabs = document.querySelectorAll('.visa-type-tab');
+    const typeContents = document.querySelectorAll('.visa-type-content');
+    
+    if(typeTabs.length > 0) {
+        typeTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active from all
+                typeTabs.forEach(t => t.classList.remove('active'));
+                typeContents.forEach(c => c.style.display = 'none');
+                
+                // Add active to clicked
+                tab.classList.add('active');
+                const targetId = tab.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                if(targetContent) {
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+    }
+
+    // Sub Tabs (Overview, Benefits, etc)
+    const subTabs = document.querySelectorAll('.product-sub-tab');
+    const subContents = document.querySelectorAll('.product-sub-content');
+    
+    if(subTabs.length > 0) {
+        subTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Get parent container to isolate tab groups per visa type
+                const parentContainer = tab.closest('.visa-type-content');
+                if(!parentContainer) return;
+
+                const siblingTabs = parentContainer.querySelectorAll('.product-sub-tab');
+                const siblingContents = parentContainer.querySelectorAll('.product-sub-content');
+
+                siblingTabs.forEach(t => t.classList.remove('active'));
+                siblingContents.forEach(c => c.style.display = 'none');
+
+                tab.classList.add('active');
+                const targetId = tab.getAttribute('data-target');
+                const targetContent = document.getElementById(targetId);
+                if(targetContent) {
+                    targetContent.style.display = 'block';
+                }
+            });
+        });
+    }
+});

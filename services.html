@@ -1,307 +1,121 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Pathways | Vihara Overseas Bespoke Advisory</title>
-    <meta name="description" content="Explore Vihara Overseas' elite skilled migration, executive corporate mobility, and bespoke scholar pathways. Directed by Regulated RCIC & MARA legal experts.">
+    <title>Global Visa Destinations | Vihara Overseas Bespoke Advisory</title>
+    <meta name="description" content="Explore Vihara Overseas' elite skilled migration, executive corporate mobility, and bespoke scholar pathways.">
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- GSAP for Luxury Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
     <script src="app.js" defer></script>
 </head>
 <body>
-
-    <!-- Ambient Cursor Glow Spotlight -->
     <div class="ambient-glow"></div>
 
     <!-- GLASSMORPHIC HEADER -->
     <header class="header" id="main-header">
         <div class="container nav-container">
-            <a href="index.html" class="logo-link" id="nav-logo-anchor">
-                <img src="vihara_logo.svg" alt="Vihara Overseas Logo" class="logo-img" id="nav-logo-image">
-                <div class="logo-text" id="logo-branding-text">
-                    VIHARA
-                    <span>OVERSEAS</span>
-                </div>
+            <a href="index.html" class="logo-link">
+                <img src="vihara_logo.svg" alt="Vihara Overseas Logo" class="logo-img">
+                <div class="logo-text">VIHARA<span>OVERSEAS</span></div>
             </a>
-            
-            <button class="nav-toggle" aria-label="Toggle navigation menu" id="mobile-menu-toggle">
-                <span class="nav-toggle-icon"></span>
-            </button>
-            
-            <ul class="nav-menu" id="header-navigation-list">
-                <li class="nav-item"><a href="index.html" class="nav-link" id="link-home">Home</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link active" id="link-services">Visa</a></li>
-                <li class="nav-item"><a href="#" class="nav-link" style="opacity: 0.6; cursor: not-allowed;" id="link-travel" title="Coming Soon">Travel (Coming Soon)</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link" id="link-about">Heritage</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link" id="link-contact">Contact</a></li>
-                <li class="nav-item">
-                    <a href="services.html" class="btn btn-primary magnetic" style="padding: 0.6rem 1.5rem; font-size: 0.75rem; margin-left: 1rem;" id="cta-header-book">
-                        Explore Visas
-                    </a>
-                </li>
+            <button class="nav-toggle" aria-label="Toggle navigation menu"><span class="nav-toggle-icon"></span></button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link active">Visa</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" style="opacity: 0.6; cursor: not-allowed;" title="Coming Soon">Travel (Coming Soon)</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="services.html" class="btn btn-primary magnetic" style="padding: 0.6rem 1.5rem; font-size: 0.75rem; margin-left: 1rem;">Explore Visas</a></li>
             </ul>
         </div>
     </header>
 
     <!-- HERO INTRO -->
-    <section class="section hero-section" style="padding-top: 10rem; padding-bottom: 5rem; min-height: auto;" id="services-hero">
+    <section class="section hero-section" style="padding-top: 10rem; padding-bottom: 5rem; min-height: auto;">
         <div class="container">
-            <div style="max-width: 800px;" class="reveal-up" id="services-hero-text">
-                <span class="subtitle">Bespoke Suites</span>
-                <h1 style="margin-bottom: 1.5rem;" id="services-main-title">Elite Global <span class="text-gold">Migration Pathways</span></h1>
-                <p style="font-size: 1.2rem; line-height: 1.8;" id="services-main-desc">
-                    We reject mass-market volume processing. Vihara Overseas operates three specialized, high-touch consultation suites tailored to your personal background, credentials, and family objectives.
+            <div style="max-width: 800px;" class="reveal-up">
+                <span class="subtitle">Global Destinations</span>
+                <h1 style="margin-bottom: 1.5rem;">Elite Global <span class="text-gold">Visa Programs</span></h1>
+                <p style="font-size: 1.2rem; line-height: 1.8;">
+                    Select your destination below to explore our premium visa service packages. From rapid business visas to comprehensive permanent residency pathways, we provide complete transparency and expert guidance.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 1: STUDENT VISA -->
-    <section class="section" style="background: var(--color-bg-pure); border-top: 1px solid var(--color-border);" id="student-visa">
+    <!-- DESTINATIONS GRID -->
+    <section class="section" style="background: var(--color-bg-pure); border-top: 1px solid var(--color-border); padding-bottom: 8rem;">
         <div class="container">
-            <div class="grid-2" style="gap: 5rem;" id="student-visa-block">
-                <div class="reveal-up" id="student-suite-narrative">
-                    <span class="subtitle">Visa Category</span>
-                    <h2 id="student-title">Student Visa</h2>
-                    <p style="font-weight: 500; color: var(--color-text); font-size: 1.1rem; margin-bottom: 1.5rem;" id="student-concept">
-                        Start your educational journey in top institutions worldwide.
-                    </p>
-                    <p style="margin-bottom: 2rem;" id="student-details">
-                        Our student visa services are designed for success. We guide you through university matching, comprehensive Statement of Purpose (SOP) styling, scholarship reviews, and the entire student visa filing process for the US, UK, Canada, Australia, and European universities.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary magnetic" id="student-cta">
-                        Consult Education Desk
-                    </a>
-                </div>
-                
-                <div style="background: linear-gradient(rgba(250, 249, 246, 0.95), rgba(250, 249, 246, 0.95)), url('scholars_university_abstract.png') no-repeat center center / cover; border: 1px solid var(--color-border); padding: 4rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-luxury); position: relative; overflow: hidden;" class="reveal-up" id="student-features-card">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 2rem;" id="student-features-title">What We Deliver</h3>
-                    <ul style="list-style: none; font-size: 0.95rem;" id="student-features-list">
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Dedicated Education Consultant Oversight</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>University Course & Scholarship Matching</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>SOP & Resume Styling Council</span>
-                        </li>
-                        <li style="display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Visa Interview Mock Briefings</span>
-                        </li>
-                    </ul>
-                </div>
+            <div class="grid-5" style="gap: 2rem;">
+                <a href="visa-usa.html" class="luxury-card magnetic reveal-up" style="display: block; text-decoration: none;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem; font-size: 1.5rem;">USA</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">B1/B2, H-1B, F-1, L-1</p>
+                </a>
+                <a href="visa-canada.html" class="luxury-card magnetic reveal-up" style="display: block; text-decoration: none; transition-delay: 0.1s;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem; font-size: 1.5rem;">Canada</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">Express Entry, Study, Visit</p>
+                </a>
+                <a href="visa-australia.html" class="luxury-card magnetic reveal-up" style="display: block; text-decoration: none; transition-delay: 0.2s;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem; font-size: 1.5rem;">Australia</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">Subclass 189, 190, 482, Study</p>
+                </a>
+                <a href="visa-uk.html" class="luxury-card magnetic reveal-up" style="display: block; text-decoration: none; transition-delay: 0.3s;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem; font-size: 1.5rem;">UK</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">Skilled Worker, Student, Visit</p>
+                </a>
+                <a href="visa-germany.html" class="luxury-card magnetic reveal-up" style="display: block; text-decoration: none; transition-delay: 0.4s;">
+                    <h3 style="color: var(--color-gold); margin-bottom: 1rem; font-size: 1.5rem;">Germany</h3>
+                    <p style="color: var(--color-text-muted); font-size: 0.9rem;">Opportunity Card, EU Blue Card</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: BUSINESS VISA -->
-    <section class="section" id="business-visa">
-        <div class="container">
-            <div class="grid-2" style="gap: 5rem;" id="business-visa-block">
-                <div style="background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url('luxury_office_bg.png') no-repeat center center / cover; border: 1px solid var(--color-border); padding: 4rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-luxury); position: relative; overflow: hidden;" class="reveal-up" id="business-features-card">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 2rem;" id="business-features-title">Business Visa Exclusives</h3>
-                    <ul style="list-style: none; font-size: 0.95rem;" id="business-features-list">
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Custom Corporate Profile Alignments</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Direct Liaison with Overseas Authorities</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Bi-Weekly Milestone Progress Updates</span>
-                        </li>
-                        <li style="display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Compliant with Global AML Rules</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="reveal-up" id="business-suite-narrative">
-                    <span class="subtitle">Visa Category</span>
-                    <h2 id="business-title">Business Visa</h2>
-                    <p style="font-weight: 500; color: var(--color-text); font-size: 1.1rem; margin-bottom: 1.5rem;" id="business-concept">
-                        Expand your business globally with the right visa.
-                    </p>
-                    <p style="margin-bottom: 2rem;" id="business-details">
-                        Designed for corporate executives, directors, technology managers, and high-net-worth investors. We orchestrate clean legal pathways to connect, collaborate, and thrive across global corridors, ensuring rapid transit with total legal certainty.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary magnetic" id="business-cta">
-                        Consult Corporate Desk
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: DEPENDENT VISA -->
-    <section class="section" style="background: var(--color-bg-pure); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" id="dependent-visa">
-        <div class="container">
-            <div class="grid-2" style="gap: 5rem;" id="dependent-visa-block">
-                <div class="reveal-up" id="dependent-suite-narrative">
-                    <span class="subtitle">Visa Category</span>
-                    <h2 id="dependent-title">Dependent Visa</h2>
-                    <p style="font-weight: 500; color: var(--color-text); font-size: 1.1rem; margin-bottom: 1.5rem;" id="dependent-concept">
-                        Reunite with your family abroad securely.
-                    </p>
-                    <p style="margin-bottom: 2rem;" id="dependent-details">
-                        Navigating family sponsorship and dependent visa applications requires absolute precision. Our dedicated team handles spouse, parent, and child dependent visa categories for top global destinations, managing all documentation and legal checks to ensure a streamlined reunion process.
-                    </p>
-                    <a href="contact.html" class="btn btn-primary magnetic" id="dependent-cta">
-                        Speak to an Expert
-                    </a>
-                </div>
-                
-                <div style="background: linear-gradient(rgba(250, 249, 246, 0.95), rgba(250, 249, 246, 0.95)), url('global_mobility_abstract.png') no-repeat center center / cover; border: 1px solid var(--color-border); padding: 4rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-luxury); position: relative; overflow: hidden;" class="reveal-up" id="dependent-features-card">
-                    <h3 style="font-size: 1.4rem; margin-bottom: 2rem;" id="dependent-features-title">Dependent Visa Services</h3>
-                    <ul style="list-style: none; font-size: 0.95rem;" id="dependent-features-list">
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Dedicated Family Sponsorship Support</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Relationship Evidence Compilation</span>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Financial Requirement Checks</span>
-                        </li>
-                        <li style="display: flex; gap: 0.75rem;">
-                            <span style="color: var(--color-gold);">✓</span>
-                            <span>Backed by our Milestone Refund Charter</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEAMLESS API TRAVEL CONCIERGE INTEGRATION -->
-    <section class="section" style="background: var(--color-bg-pure); border-top: 1px solid var(--color-border);" id="travel-synergy-block">
-        <div class="container">
-            <div class="grid-2" style="gap: 5rem; align-items: center;" id="travel-synergy-wrapper">
-                <div class="reveal-up" id="travel-synergy-narrative">
-                    <span class="subtitle">Mobility Differentiator</span>
-                    <h2>Integrated Travel Ticketing via Akbar Travels API</h2>
-                    <p style="margin-top: 1.5rem; margin-bottom: 2rem; line-height: 1.8;" id="travel-synergy-desc">
-                        Our strategic collaboration with **Akbar Travels** changes the resettlement landscape. Every pathway suite at Vihara Overseas integrates direct ticketing reservations through the **Akbar Travel API**. Once your points threshold is evaluated or your visa is filed, the API locks premium seat options, schedules private check-ins, and manages flexible dates automatically—ensuring your flight is secured in perfect harmony with your arrival schedule.
-                    </p>
-                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;" id="travel-synergy-ctas">
-                        <a href="#" class="btn btn-primary magnetic" id="travel-synergy-cta-primary" style="opacity: 0.6; cursor: not-allowed;" title="Coming Soon">
-                            Travel Options Coming Soon
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="reveal-up" id="travel-synergy-visual">
-                    <div class="luxury-card" style="padding: 3rem; background: linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.98)), url('global_mobility_abstract.png') no-repeat center center / cover; border: 1px solid var(--color-border); position: relative; overflow: hidden;" id="travel-synergy-card">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem;" id="travel-synergy-card-title">Ticketing Inclusions</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;" id="travel-synergy-card-list">
-                            <li style="display: flex; gap: 0.75rem;" id="synergy-perk-1">
-                                <span class="text-gold">✓</span>
-                                <span><strong>First-Tier Cabin Reserves:</strong> Instant First & Business Class space blocks via Akbar Travel's core inventory.</span>
-                            </li>
-                            <li style="display: flex; gap: 0.75rem;" id="synergy-perk-2">
-                                <span class="text-gold">✓</span>
-                                <span><strong>Flexible Date Protection:</strong> Complimentary flight date shifts if visa processing timelines adjust.</span>
-                            </li>
-                            <li style="display: flex; gap: 0.75rem;" id="synergy-perk-3">
-                                <span class="text-gold">✓</span>
-                                <span><strong>Resettlement Baggage Booster:</strong> Additional weight allocations for permanent residency visa bundles.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE TRUST CHARTER STATEMENT -->
-    <section class="section" id="trust-charter-block">
-        <div class="container reveal-up" style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <span class="subtitle">Our Pledge</span>
-            <h2>The Antidote to Mass-Market Visas</h2>
-            <p style="margin-top: 1.5rem; margin-bottom: 2.5rem; line-height: 1.8;" id="trust-charter-desc">
-                Unlike mass-market agencies that charge huge up-front fees with zero return accountability, Vihara Overseas stands by the **Milestone Refund Charter**. We split our process into clear, auditable stages. If an assessment fails due to our counsel error, we guarantee refund milestones. That is our promise of professional luxury.
-            </p>
-            <a href="refund-policy.html" class="btn btn-secondary magnetic" id="trust-charter-cta">
-                Read Milestone Charter
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER SECTION -->
+    <!-- FOOTER -->
     <footer class="footer" id="main-footer">
         <div class="container">
             <div class="footer-top" id="footer-top-row">
                 <div id="footer-logo-column">
-                    <div class="logo-link footer-logo" id="footer-logo-anchor">
-                        <div class="logo-text" id="footer-logo-text">
-                            VIHARA
-                            <span>OVERSEAS</span>
-                        </div>
-                    </div>
-                    <p class="footer-desc" style="max-width: 320px;" id="footer-description">
-                        Bespoke residency, career mobility, and scholar advisory engineered with absolute transparency, verified legal expertise, and premium client commitment.
-                    </p>
+                    <div class="logo-link footer-logo"><div class="logo-text">VIHARA<span>OVERSEAS</span></div></div>
+                    <p class="footer-desc" style="max-width: 320px;">Bespoke residency, career mobility, and scholar advisory engineered with absolute transparency, verified legal expertise, and premium client commitment.</p>
                 </div>
-                
                 <div id="footer-navigation-column">
-                    <h4 class="footer-title" id="footer-title-nav">Navigations</h4>
-                    <ul class="footer-links" id="footer-links-nav">
-                        <li><a href="index.html" id="footer-link-home">Home</a></li>
-                        <li><a href="services.html" id="footer-link-services">Visa</a></li>
-                        <li><a href="#" style="opacity: 0.6; cursor: not-allowed;" id="footer-link-travel" title="Coming Soon">Travel (Coming Soon)</a></li>
-                        <li><a href="about.html" id="footer-link-about">Heritage & Compliance</a></li>
-                        <li><a href="contact.html" id="footer-link-contact">Contact</a></li>
+                    <h4 class="footer-title">Navigations</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Visa</a></li>
+                        <li><a href="#" style="opacity: 0.6; cursor: not-allowed;" title="Coming Soon">Travel (Coming Soon)</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
                 <div id="footer-programs-column">
-                    <h4 class="footer-title" id="footer-title-programs">Key Programs</h4>
-                    <ul class="footer-links" id="footer-links-programs">
-                        <li><a href="services.html" id="footer-prog-canada">Student Visa</a></li>
-                        <li><a href="services.html" id="footer-prog-australia">Business Visa</a></li>
-                        <li><a href="services.html" id="footer-prog-germany">Dependent Visa</a></li>
-                        <li><a href="#" id="footer-prog-travel" class="text-gold" style="font-weight: 500; opacity: 0.6; cursor: not-allowed;" title="Coming Soon">Travel (Coming Soon)</a></li>
+                    <h4 class="footer-title">Key Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="visa-usa.html">USA Visas</a></li>
+                        <li><a href="visa-canada.html">Canada Visas</a></li>
+                        <li><a href="visa-australia.html">Australia Visas</a></li>
+                        <li><a href="#" class="text-gold" style="font-weight: 500; opacity: 0.6; cursor: not-allowed;" title="Coming Soon">Travel (Coming Soon)</a></li>
                     </ul>
                 </div>
-                
                 <div id="footer-contact-column">
-                    <h4 class="footer-title" id="footer-title-contact">Private Desk</h4>
-                    <ul class="footer-links" id="footer-links-contact" style="color: #9E9EA8; font-weight: 300;">
-                        <li style="margin-bottom: 0.8rem;" id="footer-contact-founder"><span style="color: var(--color-gold); font-weight: 500;">Direct:</span> sureshvudethe@viharaoverseas.in</li>
-                        <li style="margin-bottom: 0.8rem;" id="footer-contact-email"><span style="color: var(--color-gold); font-weight: 500;">Advisory:</span> advisory@viharaoverseas.in</li>
-                        <li id="footer-contact-phone"><span style="color: var(--color-gold); font-weight: 500;">Phone:</span> +91 98450 12345</li>
+                    <h4 class="footer-title">Private Desk</h4>
+                    <ul class="footer-links" style="color: #9E9EA8; font-weight: 300;">
+                        <li style="margin-bottom: 0.8rem;"><span style="color: var(--color-gold); font-weight: 500;">Direct:</span> sureshvudethe@viharaoverseas.in</li>
+                        <li style="margin-bottom: 0.8rem;"><span style="color: var(--color-gold); font-weight: 500;">Advisory:</span> advisory@viharaoverseas.in</li>
+                        <li><span style="color: var(--color-gold); font-weight: 500;">Phone:</span> +91 98450 12345</li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom" id="footer-bottom-row">
-                <div class="footer-copyright" id="footer-copyright-text">
-                    &copy; 2026 Vihara Overseas. All Rights Reserved. Private, bespoke advisory.
-                </div>
-                <div class="footer-legal-links" id="footer-legal-anchors">
-                    <a href="privacy-policy.html" id="footer-legal-privacy">Privacy Charter</a>
-                    <a href="terms.html" id="footer-legal-terms">Terms of Counsel</a>
-                    <a href="refund-policy.html" id="footer-legal-refund">Refund Milestone Charter</a>
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 Vihara Overseas. All Rights Reserved. Private, bespoke advisory.</div>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Charter</a>
+                    <a href="terms.html">Terms of Counsel</a>
+                    <a href="refund-policy.html">Refund Milestone Charter</a>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>
